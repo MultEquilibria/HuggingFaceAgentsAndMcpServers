@@ -19,7 +19,7 @@ def sentiment_analysis(text: str) -> str:
     result = {
         "polarity": round(sentiment.polarity, 2), # -1 (negative) to 1 (positive)
         "subjectivity": round(sentiment.subjectivity, 2), # 0 (objective) to 1 (subjective)
-        "assessment": "positive" if sentiment.positivity > 0 else "negative" if sentiment.positivity < 0 else "neutral"
+        "assessment": "positive" if sentiment.polarity > 0 else "negative" if sentiment.polarity < 0 else "neutral"
     }
     
     return json.dumps(result)
