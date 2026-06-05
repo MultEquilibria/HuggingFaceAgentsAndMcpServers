@@ -1,0 +1,14 @@
+{
+    "model": "Qwen/Qwen2.5-72B-Instruct",
+    "provider": "novita",
+    "servers": [
+        {
+            "type": "stdio",
+            "command": "npx",
+            "args": [
+                "mcp-remote",
+                "http://127.0.0.1:7868/gradio_api/mcp/sse"
+            ]
+        }
+    ]
+}
