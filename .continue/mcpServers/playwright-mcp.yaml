@@ -1,0 +1,35 @@
+# -----------------------------------------------------------------------------
+# Playwright MCP Server
+#
+# Purpose:
+#   Provides browser automation capabilities to Continue via MCP.
+#
+# Features:
+#   - Open web pages
+#   - Navigate websites
+#   - Extract content
+#   - Fill forms
+#   - Click buttons and links
+#   - Perform browser-based research
+#
+# Requirements:
+#   - Node.js installed
+#   - Internet connection
+#
+# Notes:
+#   - The server is started automatically through npx.
+#   - The latest version is downloaded when needed.
+#   - Browser actions may require user approval depending on settings.
+# -----------------------------------------------------------------------------
+
+name: Playwright mcpServer
+version: 0.0.1
+schema: v1
+mcpServers:
+  - name: Browser search
+
+    # Start MCP server using npx.  
+    command: npx
+    # Playwright MCP package.
+    args:
+      - "@playwright/mcp@latest"

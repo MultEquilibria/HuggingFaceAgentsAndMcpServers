@@ -1,0 +1,39 @@
+
+# -----------------------------------------------------------------------------
+# Local Ollama model configuration for Continue
+#
+# Model: Qwen 2.5 7B Instruct
+# Provider: Ollama
+# Purpose:
+#   General-purpose coding assistant and chat model for local development.
+#
+# Requirements:
+#   1. Ollama must be installed and running.
+#   2. Model must be pulled:
+#        ollama pull qwen2.5:7b-instruct
+#
+# Notes:
+#   - Runs entirely locally.
+#   - No API keys required.
+#   - Context window configured to 32768 tokens.
+# -----------------------------------------------------------------------------
+
+
+name: ollama qwen2.5:7b-instruct
+version: 0.0.1
+schema: v1
+models:
+  - provider: ollama
+    model: qwen2.5:7b-instruct
+
+    # Maximum context window available to Continue.
+    default_completion_options:
+      context_length: 32768
+    
+    # Friendly name displayed in Continue.
+    name: Ollama qwen2.5:7b-instruct
+    
+    # Supported use cases.
+    roles:
+      - chat
+      - edit
